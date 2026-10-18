@@ -41,6 +41,19 @@ Comparison methods are robust Nash without contraction, point Nash, risk-first, 
 
 Each method writes `episodes.csv`, `traces.json` and `metrics.json` under `runs/METHOD`. Outputs include agreement rate, cost conditional on agreement, social welfare and its ratio to the full-information maximum-sum feasible individually rational reference, worst-agent **absolute surplus** regret, IR violations, certificate coverage and actual serialized report/proposal KB. The full-information comparator uses the same finite menu; it is an evaluation reference rather than a deployable selector. Communication includes public feasibility metadata in transmitted entries. These explicit conventions replace unspecified physical-oracle, private-utility and normalization details. Comparison CSV/JSON and PNG/SVG plots contain only computed measurements. All no-agreement episodes retain zero disagreement surplus.
 
+## Registered compact reproduction setting
+
+Four-operator finite schedule/contract menus with known generated surplus intervals and a public linear feasibility oracle. Scores describe this contract game; no feeder measurements are assumed.
+
+Run from the repository root after installation. The following commands use the registered setting; they are provided for execution and have not been run as part of the source review.
+
+```bash
+mend prepare --config configs/reproduce.json --data data/reproduce
+mend compare --config configs/reproduce.json --data data/reproduce --output runs/reproduce
+```
+
+This setting needs no external dataset or pretrained weights. Generated inputs and declared fault/shift laws define the finite task; reported quantities retain that provenance.
+
 ## Multiple seeds
 
 Run matched configurations with different seeds in separate directories, then aggregate the generated metric files:

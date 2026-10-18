@@ -1,0 +1,12 @@
+{
+  "seed": 17,
+  "episodes": 40,
+  "agents": 4,
+  "schedules": 6,
+  "packages": 8,
+  "interval_width": 0.15,
+  "conflict": 0.75,
+  "delta": 0.01,
+  "risk_weight": 0.2,
+  "cost_weight": 0.2
+}
